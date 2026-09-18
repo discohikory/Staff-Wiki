@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="theme-color" content="#04060d">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+<meta name="description" content="Staff Wiki: jerarquía completa del Staff con funciones, límites, herramientas y requisitos de ascenso.">
+<title>Staff Wiki — Discohikorybrs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#04060d;--panel:rgba(15,20,35,.55);--line:rgba(139,92,246,.2);--text:#f5f7ff;--muted:#9da8c5;--a:#8b5cf6;--ok:#34d399;--bad:#f87171}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,sans-serif;line-height:1.6}
+.bg-grid{position:fixed;inset:0;z-index:-2;opacity:.14;background-image:linear-gradient(#293354 1px,transparent 1px),linear-gradient(90deg,#293354 1px,transparent 1px);background-size:44px 44px}
+header{max-width:1120px;margin:auto;padding:20px 24px;display:flex;align-items:center;gap:16px;position:sticky;top:0;z-index:50;background:rgba(4,6,13,.8);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
+.brand{font:700 16px 'Space Grotesk';color:#fff;text-decoration:none}
+.back{color:#b39aff;text-decoration:none;font-size:13px;border:1px solid var(--line);padding:8px 14px;border-radius:8px}
+main{max-width:1120px;margin:auto;padding:24px}
+.hero-t{text-align:center;padding:26px 0 6px}
+.hero-t h1{font:700 clamp(28px,4.5vw,44px) 'Space Grotesk';margin:10px 0;background:linear-gradient(90deg,#fff 25%,#fcd34d);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{color:#fcd34d;font-size:10px;font-family:'Press Start 2P',monospace;letter-spacing:2px}
+.lead{color:var(--muted);max-width:680px;margin:0 auto}
+.searchbar{display:flex;gap:10px;max-width:560px;margin:22px auto}
+.searchbar input{flex:1;font-family:inherit;color:#fff;background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:12px;outline:none;font-size:14px}
+.glass{background:var(--panel);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.08);border-radius:15px;box-shadow:0 8px 32px rgba(0,0,0,.3)}
+.rank{padding:24px;margin-bottom:20px;border-left:4px solid var(--a)}
+.rank h2{font:700 24px 'Space Grotesk';margin:0 0 4px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:12px}
+.cols h3{font-size:13px;letter-spacing:1px;margin:0 0 8px}
+.do h3{color:var(--ok)}.dont h3{color:var(--bad)}
+.cols ul{margin:0;padding-left:20px;font-size:13px;color:#d6dbee}
+.cols li{margin-bottom:5px}
+.tools{margin-top:12px;font-size:13px}
+.tools code{font-family:monospace;background:rgba(0,0,0,.4);padding:2px 8px;border-radius:6px;color:#fcd34d;margin-right:6px}
+.up{margin-top:12px;font-size:13px;border-top:1px dashed rgba(255,255,255,.12);padding-top:10px;color:var(--muted)}
+.up b{color:#fff}
+.ladder{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin:20px 0}
+.ladder a{font-size:12px;color:var(--muted);text-decoration:none;border:1px solid var(--line);border-radius:16px;padding:5px 12px}
+.ladder a:hover{color:#fff;border-color:var(--a)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+h2.st{font:700 20px 'Space Grotesk';margin:0 0 4px}
+.muted{color:var(--muted);font-size:13px}
+.rowbtns{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.btn{padding:11px 20px;border:1px solid var(--line);border-radius:10px;font-size:13px;font-weight:700;color:#fff;background:rgba(255,255,255,.04);cursor:pointer;text-decoration:none;display:inline-block}
+footer{text-align:center;padding:34px 20px;color:var(--muted);font-size:12px;border-top:1px solid rgba(255,255,255,.06);margin-top:30px}
+footer strong{color:#fff}
+.visits{margin-top:10px;font-size:13px;color:var(--muted)}
+@media(max-width:760px){.cols,.grid2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="bg-grid" aria-hidden="true"></div>
+<header>
+  <a class="back" href="https://discohikory.github.io/Portafolio/">← Portafolio</a>
+  <a class="brand" href="#">📚 Staff Wiki</a>
+</header>
+<main>
+  <div class="hero-t">
+    <p class="eyebrow">JERARQUÍA · FUNCIONES · LÍMITES</p>
+    <h1>Staff Wiki</h1>
+    <p class="lead">Quién puede qué en cada rango: funciones, prohibiciones, herramientas y cómo ascender. Misma escala del Quiz Staff.</p>
+  </div>
+  <div class="searchbar"><input id="q" maxlength="60" placeholder="Buscar rango, función o permiso…"></div>
+  <nav class="ladder" id="ladder"></nav>
+  <div id="list"></div>
+</main>
+<section style="max-width:1120px;margin:6px auto 0;padding:0 24px">
+  <div class="card glass" style="padding:22px">
+    <h2 class="st">🚀 Mis proyectos</h2>
+    <div class="grid2" id="projLinks"></div>
+  </div>
+</section>
+<footer>© 2026 Daniel Esteban Vera Fernandez · <strong>Discohikorybrs</strong> · Todos los derechos reservados.<br><small>Estructura de ejemplo para organizar equipos. Hecho con ⛏️</small><div class="visits">👁 <span id="visitCount">…</span> visitas</div></footer>
+<script>
+const PROJS=[["Portfolio principal","https://discohikory.github.io/Portafolio/"],["Staff Toolkit","https://discohikory.github.io/Staff-Toolkit/"],["Wiki de Comandos","https://discohikory.github.io/Wiki-Comandos/"],["Quiz Staff","https://discohikory.github.io/Quiz-Staff/"],["Status en vivo","https://discohikory.github.io/Server-Status/"],["Guía de Encantamientos","https://discohikory.github.io/Guia-Encantamientos/"],["Crónicas del Staff","https://discohikory.github.io/Cronicas/"],["Centro de comunidad","https://discohikory.github.io/Comunidad/"],["PlayerCards","https://discohikory.github.io/PlayerCards/"],["Radio Gamer","https://discohikory.github.io/Radio-Gamer/"],["Starter Pack","https://discohikory.github.io/Starter-Pack/"],["Aldeano IA","https://discohikory.github.io/Aldeano-IA/"],["Disco AI","https://discohikory.github.io/Disco-AI/"],["Bingo MC","https://discohikory.github.io/Bingo-MC/"],["Semillas","https://discohikory.github.io/Semillas/"],["Fanarts","https://discohikory.github.io/Fanarts/"]];
+document.getElementById('projLinks').innerHTML=PROJS.map(p=>`<div><h3 style="margin:6px 0">${p[0]}</h3><div class="rowbtns"><a class="btn" href="${p[1]}">Abrir ↗</a></div></div>`).join('');
+const RANKS=[
+{r:"Jr-Helper",icon:"🌱",do:["Orientar a nuevos y responder dudas básicas","Reportar infracciones con pruebas","Mediar verbalmente en discusiones leves","Recibir reportes y derivarlos"],dont:["Aplicar sanciones (mute, ban, warn)","Modificar configuraciones","Decidir apelaciones","Dar o quitar rangos"],tools:["/msg","/help","/rules","Tickets"],up:"1 mes activo + Quiz Jr-Helper 60% + historial limpio."},
+{r:"Helper",icon:"🛠️",do:["Warns y mutes leves","Mediar conflictos y cerrar tickets","Archivar o escalar reportes","Registrar todo en historial"],dont:["Bans temporales o permanentes","Tocar economía o configs","Sancionar a otros Staff","Decidir apelaciones graves"],tools:["/warn","/mute","/ticket"],up:"Quiz Helper 60% + 50 tickets atendidos + buena conducta."},
+{r:"Jr-Mod",icon:"🔰",do:["Tempbans y mutes medios","Revisar apelaciones leves","Pedir rollbacks con datos","Vigilar con vanish"],dont:["Bans permanentes","Rollback directo sin permiso","Tocar economía","Decidir casos graves solo"],tools:["/tempban","/co lookup"],up:"Quiz Jr-Mod 60% + 3 meses como Helper."},
+{r:"Mod",icon:"🛡️",do:["Bans temporales y decidir apelaciones","Rollback con filtros","Entrenar Helpers","Vigilar eventos y raids"],dont:["Permanentes sin aval","Consola y economía","Despedir Staff","Cambiar reglas"],tools:["/ban","/co rollback"],up:"Quiz Mod 60% + aval de un Sr-Mod."},
+{r:"Sr-Mod",icon:"⚔️",do:["Permanentes con aval y crisis","Auditar sanciones","Formar Jr-Mods","Mediar entre Staff"],dont:["Consola","Economía y contrataciones","Cambiar reglas en solitario","Exponer datos"],tools:["Historiales","Rollback masivo"],up:"Quiz Sr-Mod 60% + 6 meses y 0 amonestaciones."},
+{r:"Jr-Admin",icon:"🔧",do:["LuckPerms básico y prefijos","Configs supervisadas y backups","Preparar eventos técnicos","Reportar bugs con datos"],dont:["Consola","Producción sin probar","Economía","Decisiones de Staff"],tools:["/lp","Backups","Test server"],up:"Quiz Jr-Admin 60% + prueba técnica."},
+{r:"Admin",icon:"⚡",do:["Consola limitada y contrataciones","Diseñar reglas y EULA","Decisiones finales y crisis","Monitoreo y backups"],dont:["Actuar sin registrar","Exponer datos o claves","Saltarse la EULA","Acumular todo el poder"],tools:["Consola","Backups externos"],up:"Quiz Admin 60% + confianza del equipo directivo."},
+{r:"Developer",icon:"💻",do:["Código, configs y deploys con backup","Debug con logs y timings","Documentar cambios","Probar en test"],dont:["Producción directa","Hardcodear claves","Romper compatibilidad","Ignorar versiones"],tools:["Git","Spark","Consola test"],up:"Quiz Developer 60% + proyecto funcional."},
+{r:"Manager",icon:"📋",do:["Equipo, eventos y tienda","Comunicar normas","Alianzas y métricas","Mediar y reconocer"],dont:["Código en producción","Consola","Finanzas finales","Microgestionar todo"],tools:["Encuestas","Calendario"],up:"Quiz Manager 60% + 3 meses como Admin/Mod senior."},
+{r:"Head-Manager",icon:"👑",do:["Visión, finanzas y alianzas","Decisiones finales","Cultura y sucesión","Representar el proyecto"],dont:["Violar la EULA","Exponer datos","Actuar sin registro","Creerse intocable"],tools:["Roadmap","Métricas"],up:"Designación + Quiz Head-Manager 80%."}
+];
+const esc=v=>{const d=document.createElement('div');d.textContent=v==null?"":v;return d.innerHTML};
+document.getElementById('ladder').innerHTML=RANKS.map((r,i)=>`<a href="#r${i}">${r.icon} ${r.r}</a>`).join('');
+function paint(){
+  const t=document.getElementById('q').value.trim().toLowerCase();
+  document.getElementById('list').innerHTML=RANKS.map((r,i)=>{
+    const hay=!t||(r.r+" "+r.do.join(" ")+" "+r.dont.join(" ")+" "+r.tools.join(" ")).toLowerCase().includes(t);
+    if(!hay)return"";
+    return `<div class="rank glass" id="r${i}"><h2>${r.icon} ${r.r}</h2>
+    <div class="cols"><div class="do"><h3>✅ PUEDE</h3><ul>${r.do.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>
+    <div class="dont"><h3>⛔ NO PUEDE</h3><ul>${r.dont.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div></div>
+    <div class="tools"><b>Herramientas:</b> ${r.tools.map(x=>`<code>${esc(x)}</code>`).join('')}</div>
+    <div class="up"><b>Para ascender:</b> ${esc(r.up)} <a href="https://discohikory.github.io/Quiz-Staff/" style="color:#b39aff">Probarme en el Quiz ↗</a></div></div>`;
+  }).join('')||'<div class="rank glass"><p class="muted">Sin resultados.</p></div>';
+}
+document.getElementById('q').addEventListener('input',paint);
+paint();
+(function(){
+  var el=document.getElementById('visitCount');
+  if(!el)return;
+  function fmt(n){n=Number(n)||0;return n>=1000?(n/1000).toFixed(1).replace('.',',').replace(',0','')+' mil':String(n)}
+  fetch('https://api.jsonbin.io/v3/b/6aac6a86ffd5d1605313c161/latest',{headers:{'X-Access-Key':'$2a$10$XbVd43wzBhlIfE1632782ePKNz5e/MaX25U3NJ5JRIBKtJt0ILnXC'}})
+  .then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){
+    var v=(j.record&&j.record.visits)||{};
+    v.staffwiki=(v.staffwiki||0)+1;
+    el.textContent=fmt(v.staffwiki);
+    fetch('https://api.jsonbin.io/v3/b/6aac6a86ffd5d1605313c161',{method:'PUT',headers:{'Content-Type':'application/json','X-Access-Key':'$2a$10$XbVd43wzBhlIfE1632782ePKNz5e/MaX25U3NJ5JRIBKtJt0ILnXC','X-Bin-Versioning':'false'},body:JSON.stringify({visits:v})}).catch(function(){});
+  }).catch(function(){el.textContent='—'});
+})();
+</script>
+</body>
+</html>
